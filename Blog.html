@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>blog</title>
+    <style>
+                  /* ---------- Reset (important) ---------- */
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+
+        /* ---------- Navigation Bar ---------- */
+        .header {
+          width: 100%;
+          height: 80px;
+          background-color: #000000;   /* black navbar */
+          display: flex;
+          justify-content: space-between; /* logo left, links right */
+          align-items: center;
+          padding: 0 40px;             /* space from left & right edges */
+          box-sizing: border-box;
+        }
+
+        /* Logo */
+        .logo img {
+          height: 50px;                /* control logo size */
+          width: auto;
+        }
+
+        /* Right-side navigation links */
+        .grouped-selections {
+          display: flex;
+          gap: 30px;                   /* spacing between links */
+        }
+
+        /* Nav links */
+        .grouped-selections a {
+          text-decoration: none;
+          color: #ffffff;              /* white text */
+          font-size: 1rem;
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+
+        /* Hover effect */
+        .grouped-selections a:hover {
+          color: #7CFF4D;               /* optional: gym green accent */
+        }
+
+        /* ---------- Responsive (Mobile) ---------- */
+        @media (max-width: 768px) {
+          .header {
+            flex-direction: column;    /* stack logo + links */
+            height: auto;
+            padding: 20px;
+            gap: 15px;
+          }
+
+          .grouped-selections {
+            flex-direction: column;    /* stack links vertically */
+            align-items: center;
+            gap: 12px;
+          }
+        }
+
+      .change-color{
+        color: white;
+        text-decoration: none;
+      }
+
+      /*-home page-*/
+      body{
+        margin: 0;
+      }
+
+      /*-blog-*/
+
+    .left-margin-heading,
+    .left-margin-text,
+    .image-div,
+    .date-div {
+      max-width: 1000px;     /* controls alignment */
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+    }
+
+    .left-margin-heading {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
+
+    .image-div {
+  margin-bottom: 25px;
+   }
+
+  .blog-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .left-margin-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 25px;
+ }
+
+ .date-div {
+  display: flex;
+  justify-content: space-between;   /* pushes dates to edges */
+  font-size: 0.9rem;
+  color: #000;
+  margin-bottom: 60px;
+ }
+
+ @media (max-width: 600px) {
+  .left-margin-heading {
+    font-size: 2rem;
+  }
+
+  .date-div {
+    font-size: 0.85rem;
+  }
+ }
+              
+   /* ---------- Footer Section ---------- */
+
+
+
+.leftright-CTA {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #000000;   /* black background */
+  color: #ffffff;              /* white text */
+  margin-top: 80px;
+}
+
+/* Left Section */
+.CTA-left {
+  flex: 1 1 300px;
+  max-width: 550px;
+}
+
+.CTA-left h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.CTA-left p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.subsrcibe-div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-button {
+  padding: 10px;
+  flex: 1 1 150px;
+  min-width: 150px;
+  border: none;
+  border-radius: 3px;
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(4, 202, 4);
+  border-radius: 3px;
+}
+
+/* Right Section */
+.CTA-right {
+  flex: 1 1 250px;
+  max-width: 450px;
+  text-align: center;
+}
+
+.CTA-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.CTA-right p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Social icons container */
+.grouped-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Each social media icon inside white circle */
+.social-div {
+  width: 45px;                  /* circle width */
+  height: 45px;                 /* circle height */
+  background-color: #ffffff;    /* white circle */
+  border-radius: 50%;           /* makes it circular */
+  display: flex;
+  justify-content: center;      /* center icon horizontally */
+  align-items: center;          /* center icon vertically */
+  cursor: pointer;
+}
+
+.social-div img {
+  width: 20px;                  /* size of icon inside circle */
+  height: auto;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+
+@media (max-width: 768px) {
+  .leftright-CTA {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 15px;
+  }
+
+  .CTA-left,
+  .CTA-right {
+    max-width: 90%;
+    flex: 1 1 100%;
+  }
+
+  .subsrcibe-div {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .search-button,
+  .subscribe-button {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+
+    
+
+
+
+    </style>
+  </head>
+  <body>
+      <section>
+        <header class="header">
+        <div class="logo"><img src="gym logo/kinetic Loft Logo green-01.png"></div>
+          <div class="grouped-selections">
+            <a class="change-color" href="index.html">Home</a>
+            <a class="change-color" href="About-us.html">Personal Training</a>
+            <a class="change-color" href="Prices.html">Pricing</a>
+            <a class="change-color" href="Blog.html">Blog</a>
+            <a class="change-color" href="Contacts.html">Contacts</a>
+        </div>
+      </header>
+   </section>
+
+      <section>
+          <h2 class="left-margin-heading">Boosting Your Metabolism: The Fast<br>
+          Track to a Healthier You</h2>
+
+          <div class="image-div">
+              <img src="Web-Images/pexels-cesar-galeao-1673528-3253501.jpg" class="blog-image">
+          </div>
+
+          
+
+          <p class="left-margin-text">
+              Metabolism is the process by which your body converts what you eat and drink into energy. A fast metabolism<br> can help you born more calories, lose weight moreefficiently, and feel more energetic. So, how can you rev up<br> your metabolic engine? Here are some top tips: Remember, while these tips can assist in
+              boosting.
+          </p>
+
+          <div class="date-div">
+            <p class="date"><u>July 26, 2023</u></p>
+            <p><u>July 26, 2023</u></p>
+          </div>
+      </section>
+
+
+
+    <section>
+        <h2 class="left-margin-heading">Unleashing Power with Mini<br>
+          Resistance Bands</h2>
+
+          <p class="left-margin-text">
+            Metabolism is the process by which your body converts what you eat and drink into energy. A fast metabolism<br> can help you born more calories, lose weight moreefficiently, and feel more energetic. So, how can you rev up<br> your metabolic engine? Here are some top tips: Remember, while these tips can assist in
+            boosting.
+          </p>
+
+          <div class="date-div">
+            <p class="date"><u>July 26, 2023</u></p>
+            <p><u>July 26, 2023</u></p>
+          </div>
+    </section>
+
+
+
+    <!--footer-->
+     
+<section>
+        <div class="leftright-CTA">
+             <div class="CTA-left">
+                  <h3> KINETIC LOFT</h3>
+                  <p>Personal fitness training service</p>
+                  <p>
+                      unlock your potential and redefine your limits with us.Our trainers tailor workout to your<br>
+                      ability, ensuring you're fit today and undeniably stronger tomorrow. it's our commitment<br>
+                      to your health. We deliver effective, efficient workouts paired with nutritional guidance to<br>
+                      help you reach your fitness peak.
+                  </p>
+                  <div class="subsrcibe-div">
+                  <input class="search-button" type="text" placeholder="Email Address">
+                  <button class="subscribe-button">Subscribe</button>
+                  </div>
+                </div>
+
+                <div class="CTA-right">
+                  <h3>
+                    Get Updated
+                  </h3>
+                    <p>
+                      Stay ahead in your fitness journey with our<br>
+                      exclusive tips and offers.
+                    </p>
+                    <div class="grouped-socials">
+                      <div class="social-div"><img src="Web-Images/facebook.png" class="social-icons"></div>
+                      <div class="social-div"><img src="Web-Images/tik-tok.png" class="social-icons"></div>
+                      <div class="social-div"><img src="Web-Images/instagram.png" class="social-icons"></div>
+                      <div class="social-div"><img src="Web-Images/twitter.png" class="social-icons"></div>
+                    </div>
+                </div>
+          </div>    
+     </div>
+</section>
+          
+          
+      
+
+
+      
+
+
+
+
+
+
+  </body>
+</html>

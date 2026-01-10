@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personal Training</title>
+    <style>
+    
+          /* ---------- Reset (important) ---------- */
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ---------- Navigation Bar ---------- */
+      .header {
+        width: 100%;
+        height: 80px;
+        background-color: #000000;   /* black navbar */
+        display: flex;
+        justify-content: space-between; /* logo left, links right */
+        align-items: center;
+        padding: 0 40px;             /* space from left & right edges */
+        box-sizing: border-box;
+      }
+
+      /* Logo */
+      .logo img {
+        height: 50px;                /* control logo size */
+        width: auto;
+      }
+
+      /* Right-side navigation links */
+      .grouped-selections {
+        display: flex;
+        gap: 30px;                   /* spacing between links */
+      }
+
+      /* Nav links */
+      .grouped-selections a {
+        text-decoration: none;
+        color: #ffffff;              /* white text */
+        font-size: 1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      /* Hover effect */
+      .grouped-selections a:hover {
+        color: #7CFF4D;               /* optional: gym green accent */
+      }
+
+      /* ---------- Responsive (Mobile) ---------- */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;    /* stack logo + links */
+          height: auto;
+          padding: 20px;
+          gap: 15px;
+        }
+
+        .grouped-selections {
+          flex-direction: column;    /* stack links vertically */
+          align-items: center;
+          gap: 12px;
+        }
+      }
+
+      
+
+      .change-color{
+        color: white;
+        text-decoration: none;
+      }
+
+      /*-home page-*/
+      body{
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .About-us{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+       
+      }
+
+  
+  /*-about kinetic loft-*/
+
+  .Heading{
+    font-size: 2.4rem;
+  }
+  
+ 
+
+  
+
+
+
+  .about-kineticloft {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 60px;
+        padding: 0 20px;
+        color: #000000;
+      }
+
+      .about-us {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-bottom: 15px;
+         color: #000000;
+      }
+
+      .about-kineticloft h2 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+         color: #000000;
+      }
+
+      .about-kineticloft p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .three-blocks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;                  /* spacing between paragraphs */
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+       color: #000000;
+    }
+
+    @media (max-width: 900px) {
+      .three-blocks {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .three-blocks {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+
+    .paragraph-1 h4 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+     color: #000000;
+    }
+
+    .paragraph-1 p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+
+    /*- 6 steps success-*/
+
+      .no-steps-subheading-2 {
+        text-align: center;          /* center heading + subheading */
+        max-width: 900px;
+        margin: 0 auto 60px;         /* space below before grid starts */
+        padding: 0 20px;
+        color: #000000;
+      }
+
+      .no-steps {
+      
+        margin-bottom: 20px;
+        line-height: 1.2;
+        font-size: 1.4rem;
+        
+      }
+
+      .subheading-2 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #555;                 /* slightly softer than heading */
+      }
+
+        .step-blocks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns desktop */
+      gap: 40px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #000000;
+    }
+
+      @media (max-width: 1024px) {
+      .step-blocks {
+        grid-template-columns: repeat(2, 1fr); /* tablet */
+      }
+      }
+
+      @media (max-width: 600px) {
+        .step-blocks {
+          grid-template-columns: 1fr; /* mobile */
+        }
+      }
+
+        .block-A {
+        border: 1px solid #e5e5e5;
+        padding: 30px;
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+        .block-1 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        line-height: 1.3;
+        color: #000000;
+      }
+
+      .number-1 {
+        font-size: 1rem;
+        font-weight: bold;
+        opacity: 0.6;
+        color: #000000;
+      }
+
+      .description-2 {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #000000;
+      }
+
+   /* ---------- Footer Section ---------- */
+
+
+
+.leftright-CTA {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #000000;   /* black background */
+  color: #ffffff;              /* white text */
+}
+
+/* Left Section */
+.CTA-left {
+  flex: 1 1 300px;
+  max-width: 550px;
+}
+
+.CTA-left h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.CTA-left p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.subsrcibe-div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-button {
+  padding: 10px;
+  flex: 1 1 150px;
+  min-width: 150px;
+  border: none;
+  border-radius: 3px;
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(4, 202, 4);
+  border-radius: 3px;
+}
+
+/* Right Section */
+.CTA-right {
+  flex: 1 1 250px;
+  max-width: 450px;
+  text-align: center;
+}
+
+.CTA-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.CTA-right p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Social icons container */
+.grouped-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Each social media icon inside white circle */
+.social-div {
+  width: 45px;                  /* circle width */
+  height: 45px;                 /* circle height */
+  background-color: #ffffff;    /* white circle */
+  border-radius: 50%;           /* makes it circular */
+  display: flex;
+  justify-content: center;      /* center icon horizontally */
+  align-items: center;          /* center icon vertically */
+  cursor: pointer;
+}
+
+.social-div img {
+  width: 20px;                  /* size of icon inside circle */
+  height: auto;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+
+@media (max-width: 768px) {
+  .leftright-CTA {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 15px;
+  }
+
+  .CTA-left,
+  .CTA-right {
+    max-width: 90%;
+    flex: 1 1 100%;
+  }
+
+  .subsrcibe-div {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .search-button,
+  .subscribe-button {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+
+
+    </style>
+  </head>
+  <body>
+  <section>
+        <header class="header">
+        <div class="logo"><img src="gym logo/kinetic Loft Logo green-01.png"></div>
+          <div class="grouped-selections">
+            <a class="change-color" href="index.html">Home</a>
+            <a class="change-color" href="About-us.html">Personal Training</a>
+            <a class="change-color" href="Prices.html">Pricing</a>
+            <a class="change-color" href="Blog.html">Blog</a>
+            <a class="change-color" href="Contacts.html">Contacts</a>
+        </div>
+      </header>
+   </section>
+
+       <section class="About-us">
+          <div>
+            <h2 class="Heading">Personal Training</h2>
+            <p>
+              It's our commitment to your health. we deliver effective, efficient workouts paired<br>
+              with nutritional guidance  to help you reach your fitness peak. 
+            </p>
+
+          </div>
+          
+          <div class="no-steps-subheading-2">
+            <h3 class="no-steps">6-step sucess:<br>
+            Your fitness roadmap</h3>
+            <p class="subheading-2">We've developed a meticulously crafted, comprehensive six-step process
+            that<br>acts as your personal roadmap, guiding you steadily towards your fitness goals.
+            </p>
+          </div>
+       </section>
+
+
+       
+      <section>
+        <div class="step-blocks">
+           <div class="block-A">
+              <h3 class="block-1">
+              <span class="number-1">0.1</span><br>Personal Fitness<br>
+              Assessment
+              </h3>
+              <p class="description-2">
+                  We begin with a comprehensive<br> understanding of your history, goals,<br>and lifestyle.The holistic approach<br>encompassing habits and nutrition,<br> ensure a trailor-made fitness journey just<br> for you. 
+              </p>
+              <h4 class="fitness">
+                  <u>Fitness Assessment</u>
+              </h4>
+           </div>
+
+           <div class="block-A">
+              <h3 class="block-1">
+                <span class="number-1">0.2</span><br>Basic Movement<br>
+                Assessment
+              </h3>
+              <p class="description-2">
+                   We begin with a comprehensive<br> understanding of your history, goals,<br>and lifestyle.The holistic approach<br>encompassing habits and nutrition,<br> ensure a trailor-made fitness journey just<br> for you. 
+              </p>
+              <h4 class="fitness">
+                   <u>Programs & Support</u>
+              </h4>
+           </div>
+
+            <div class="block-A">
+               <h3 class="block-1">
+                 <span class="number-1">0.3</span><br>Precision Body<br>
+                  Composition Scan
+               </h3>
+               <p class="description-2">
+                  We begin with a comprehensive<br> understanding of your history, goals,<br>and lifestyle.The holistic approach<br>encompassing habits and nutrition,<br> ensure a trailor-made fitness journey just<br> for you. 
+               </p>
+               <h4 class="fitness">
+                  <u>Nutrition Guidance</u>
+               </h4>
+            </div>
+     </div>
+
+     <div class="step-blocks">
+            <div class="block-A">
+              <h3 class="block-1">
+                <span class="number-1">0.4</span><br>Adaptable Fitness<br>
+                Assessment
+              </h3>
+              <p class="description-2">
+                We begin with a comprehensive<br> understanding of your history, goals,<br>and lifestyle.The holistic approach<br>encompassing habits and nutrition,<br> ensure a trailor-made fitness journey just<br> for you. 
+              </p>
+              <h4 class="fitness">
+                 <u>Fitness Assessment</u>
+              </h4>
+            </div>
+
+            <div class="block-A">
+              <h3 class="block-1">
+              <span class="number-1">0.5</span><br>Personalised<br> Programs
+              </h3>
+              <p class="description-2">
+                We begin with a comprehensive<br> understanding of your history, goals,<br>and lifestyle.The holistic approach<br>encompassing habits and nutrition,<br> ensure a trailor-made fitness journey just<br> for you. 
+              </p>
+              <h4 class="fitness">
+                 <u>Programs & Support</u>
+              </h4>
+            </div>
+
+            <div class="block-A">
+              <h3 class="block-1">
+              <span class="number-1">0.6</span><br>Personalised<br> Nutrition Guidance
+
+              </h3>
+                <p class="description-2">
+                  We begin with a comprehensive<br> understanding of your history, goals,<br>and lifestyle.The holistic approach<br>encompassing habits and nutrition,<br> ensure a trailor-made fitness journey just<br> for you. 
+                </p>
+                <h4 class="fitness">
+                   <u>Nutrition Guidance</u>
+                </h4>
+            </div>
+      </div>
+      </section>
+
+
+    <!--footer-->
+     
+<section>
+        <div class="leftright-CTA">
+             <div class="CTA-left">
+                  <h3> KINETIC LOFT</h3>
+                  <p>Personal fitness training service</p>
+                  <p>
+                      unlock your potential and redefine your limits with us.Our trainers tailor workout to your<br>
+                      ability, ensuring you're fit today and undeniably stronger tomorrow. it's our commitment<br>
+                      to your health. We deliver effective, efficient workouts paired with nutritional guidance to<br>
+                      help you reach your fitness peak.
+                  </p>
+                  <div class="subsrcibe-div">
+                  <input class="search-button" type="text" placeholder="Email Address">
+                  <button class="subscribe-button">Subscribe</button>
+                  </div>
+                </div>
+
+                <div class="CTA-right">
+                  <h3>
+                    Get Updated
+                  </h3>
+                    <p>
+                      Stay ahead in your fitness journey with our<br>
+                      exclusive tips and offers.
+                    </p>
+                    <div class="grouped-socials">
+                      <div class="social-div"><img src="Web-Images/facebook.png" class="social-icons"></div>
+                      <div class="social-div"><img src="Web-Images/tik-tok.png" class="social-icons"></div>
+                      <div class="social-div"><img src="Web-Images/instagram.png" class="social-icons"></div>
+                      <div class="social-div"><img src="Web-Images/twitter.png" class="social-icons"></div>
+                    </div>
+                </div>
+          </div>    
+     </div>
+</section>
+
+        
+
+
+      
+  </body>
+</html>

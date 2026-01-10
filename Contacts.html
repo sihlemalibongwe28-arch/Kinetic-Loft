@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+
+          /* ---------- Reset (important) ---------- */
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ---------- Navigation Bar ---------- */
+      .header {
+        width: 100%;
+        height: 80px;
+        background-color: #000000;   /* black navbar */
+        display: flex;
+        justify-content: space-between; /* logo left, links right */
+        align-items: center;
+        padding: 0 40px;             /* space from left & right edges */
+        box-sizing: border-box;
+      }
+
+      /* Logo */
+      .logo img {
+        height: 50px;                /* control logo size */
+        width: auto;
+      }
+
+      /* Right-side navigation links */
+      .grouped-selections {
+        display: flex;
+        gap: 30px;                   /* spacing between links */
+      }
+
+      /* Nav links */
+      .grouped-selections a {
+        text-decoration: none;
+        color: #ffffff;              /* white text */
+        font-size: 1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      /* Hover effect */
+      .grouped-selections a:hover {
+        color: #7CFF4D;               /* optional: gym green accent */
+      }
+
+      /* ---------- Responsive (Mobile) ---------- */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;    /* stack logo + links */
+          height: auto;
+          padding: 20px;
+          gap: 15px;
+        }
+
+        .grouped-selections {
+          flex-direction: column;    /* stack links vertically */
+          align-items: center;
+          gap: 12px;
+        }
+      }
+
+      .change-color{
+        color: white;
+        text-decoration: none;
+      }
+
+      /*-contacts-*/
+   
+    .contact-section {
+      max-width: 1000px;   /* same logic as blog image */
+      margin: 80px auto;   /* center + vertical spacing */
+      padding: 0 20px;     /* LEFT margin you wanted */
+    }
+
+    .contact-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.fill {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.in-bracket-text {
+  font-size: 0.8rem;
+  color: #777;
+  margin-left: 6px;
+}
+
+.type-in-div,
+.type-message {
+  margin-bottom: 30px;
+}
+
+.type-in-box {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.type-in-box2 {
+  width: 100%;
+  min-height: 180px;   /* taller than others */
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.type-in-div input[placeholder] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 18px;
+}
+
+.register-button {
+  margin-top: 20px;          /* gap from message box */
+  padding: 12px 40px;
+  background-color: rgb(4, 202, 4);
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
+
+ 
+}
+
+
+     
+
+    </style>
+  </head>
+  <body>
+    <section>
+        <header class="header">
+        <div class="logo"><img src="gym logo/kinetic Loft Logo green-01.png"></div>
+          <div class="grouped-selections">
+            <a class="change-color" href="index.html">Home</a>
+            <a class="change-color" href="About-us.html">Personal Training</a>
+            <a class="change-color" href="Prices.html">Pricing</a>
+            <a class="change-color" href="Blog.html">Blog</a>
+            <a class="change-color" href="Contacts.html">Contacts</a>
+        </div>
+      </header>
+   </section>
+
+
+ <section class="contact-section">
+
+  <div class="group-of-texts">
+    <h2>Contacts</h2>
+    <p>Contacts us today to secure a space on our next programme</p>
+    <h4 class="fill">Name<span class="in-bracket-text">(required)</span></h4>
+  </div>
+
+  <div class="type-in-div">
+    <input type="text" class="type-in-box">
+  </div>
+
+  <div class="group-of-texts">
+    <h4 class="fill">Email<span class="in-bracket-text">(required)</span></h4>
+  </div>
+
+  <div class="type-in-div">
+    <input type="text" class="type-in-box">
+  </div>
+
+  <div class="group-of-texts">
+    <h4 class="fill">Phone<span class="in-bracket-text">(required)</span></h4>
+  </div>
+
+  <div class="type-in-div">
+    <input type="text" class="type-in-box">
+  </div>
+
+  <div class="group-of-texts">
+    <h4 class="fill">Which plan are you interested?
+      <span class="in-bracket-text">(required)</span>
+    </h4>
+  </div>
+
+  <div class="type-in-div">
+    <input type="text" placeholder="Select one option" class="type-in-box">
+  </div>
+
+  <div class="group-of-texts">
+    <h4 class="fill">Message<span class="in-bracket-text">(required)</span></h4>
+  </div>
+
+  <div class="type-message">
+    <input type="text" class="type-in-box2">
+  </div>
+
+  <button class="register-button">Register your interest</button>
+
+</section>
+
+
+    
+      
+    
+      
+
+
+
+
+
+
+  </body>
+</html>
