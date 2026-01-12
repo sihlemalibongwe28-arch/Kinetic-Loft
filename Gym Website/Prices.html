@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>prices</title>
+    <style>
+      
+      /* ---------- Reset (important) ---------- */
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ---------- Navigation Bar ---------- */
+      .header {
+        width: 100%;
+        height: 80px;
+        background-color: #000000;   /* black navbar */
+        display: flex;
+        justify-content: space-between; /* logo left, links right */
+        align-items: center;
+        padding: 0 40px;             /* space from left & right edges */
+        box-sizing: border-box;
+      }
+
+      /* Logo */
+      .logo img {
+        height: 50px;                /* control logo size */
+        width: auto;
+      }
+
+      /* Right-side navigation links */
+      .grouped-selections {
+        display: flex;
+        gap: 30px;                   /* spacing between links */
+      }
+
+      /* Nav links */
+      .grouped-selections a {
+        text-decoration: none;
+        color: #ffffff;              /* white text */
+        font-size: 1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      /* Hover effect */
+      .grouped-selections a:hover {
+        color: #7CFF4D;               /* optional: gym green accent */
+      }
+
+      /* ---------- Responsive (Mobile) ---------- */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;    /* stack logo + links */
+          height: auto;
+          padding: 20px;
+          gap: 15px;
+        }
+
+        .grouped-selections {
+          flex-direction: column;    /* stack links vertically */
+          align-items: center;
+          gap: 12px;
+        }
+      }
+
+      /*-website logo-*/
+      .logo{
+        margin-left: 60px;
+        display: flex;
+        height: 60px;
+        width: auto;
+        margin-right: 30px;
+         
+      }
+
+
+      .change-color{
+        color: white;
+        text-decoration: none;
+      }
+
+      /*-home page-*/
+      body{
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .maximum-result{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        
+      }
+
+
+      /*-pricing-*/
+
+      .Heading{
+        font-size: 2.4rem;
+      }
+
+
+      .results {
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 0 20px;
+        color: #000000;
+      }
+
+      .results h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #000000;
+      }
+
+      .results p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #555;
+        color: #000000;
+      }
+
+
+      .result-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto 60px;
+        padding: 0 20px;
+        color: #000000;
+      }
+
+
+      .result-box {
+        border: 4px solid #000;   /* thick border */
+        padding: 35px 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #000000;
+      }
+
+
+      .result-box h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        color: #000000;
+      }
+
+      .result-box p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        color: #000000;
+      }
+
+      .result-box h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #000000;
+      }
+
+      .amount {
+        font-size: 0.9rem;
+        font-weight: normal;
+        margin-left: 5px;
+        color: #000000;
+      }
+
+      .GS-Button {
+        padding: 12px 30px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .training-sessions {
+        text-align: center;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #000000;
+      }
+
+      .supporting-text {
+        text-align: center;
+        padding: 0 20px;
+        color: #000000;
+      }
+
+      .support-paragraph {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 80px;
+      }
+
+      @media (max-width: 900px) {
+        .result-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .result-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+
+        /* ---------- Footer Section ---------- */
+
+      .leftright-CTA {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: #000000;   /* black background */
+        color: #ffffff;              /* white text */
+      }
+
+      /* Left Section */
+      .CTA-left {
+        flex: 1 1 300px;
+        max-width: 550px;
+      }
+
+      .CTA-left h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .CTA-left p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .subsrcibe-div {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .search-button {
+        padding: 10px;
+        flex: 1 1 150px;
+        min-width: 150px;
+        border: none;
+        border-radius: 3px;
+      }
+
+      .subscribe-button {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(4, 202, 4);
+        border-radius: 3px;
+      }
+
+      /* Right Section */
+      .CTA-right {
+        flex: 1 1 250px;
+        max-width: 450px;
+        text-align: center;
+      }
+
+      .CTA-right h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .CTA-right p {
+        margin-bottom: 15px;
+        line-height: 1.5;
+      }
+
+      /* Social icons container */
+      .grouped-socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      /* Each social media icon inside white circle */
+      .social-div {
+        width: 45px;                  /* circle width */
+        height: 45px;                 /* circle height */
+        background-color: #ffffff;    /* white circle */
+        border-radius: 50%;           /* makes it circular */
+        display: flex;
+        justify-content: center;      /* center icon horizontally */
+        align-items: center;          /* center icon vertically */
+        cursor: pointer;
+      }
+
+      .social-div img {
+        width: 20px;                  /* size of icon inside circle */
+        height: auto;
+      }
+
+      /* ---------- Responsive Adjustments ---------- */
+
+      @media (max-width: 768px) {
+        .leftright-CTA {
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          padding: 30px 15px;
+        }
+
+        .CTA-left,
+        .CTA-right {
+          max-width: 90%;
+          flex: 1 1 100%;
+        }
+
+        .subsrcibe-div {
+          flex-direction: column;
+          align-items: center;
+          
+        }
+
+        .search-button,
+        .subscribe-button {
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+ <section>
+        <header class="header">
+        <div class="logo"><img src="gym logo/kinetic Loft Logo green-01.png"></div>
+          <div class="grouped-selections">
+            <a class="change-color" href="index.html">Home</a>
+            <a class="change-color" href="About-us.html">Personal Training</a>
+            <a class="change-color" href="Prices.html">Pricing</a>
+            <a class="change-color" href="Blog.html">Blog</a>
+            <a class="change-color" href="Contacts.html">Contacts</a>
+        </div>
+      </header>
+   </section>
+
+ <section>
+    <div class="maximum-result">
+        <h2 class="Heading">Maximum results</h2>
+        <p>At Kinetic Loft, we believe in making fitness       affordable. Enjoy high-value training<br>
+        experiences at incredibly competitive prices.</p>
+      </div>
+</section>
+     
+ <section>
+        <div class="result-grid">
+          <div class="result-box">
+              <h3>Starter Plan</h3>
+                <p>Perfect for fitness newcomers, this plan<br>
+                    eases you into the fitness world with<br>
+                    personalised workouts, simple nutrition<br>
+                    guidance, and a supportive community.<br>
+                    Choose this for a gentle introduction to<br>
+                    your fitness journey.
+                </p>
+
+                <h2>R250<span class="amount">per month</span></h2>
+
+                <button class="GS-Button">Get Started</button>
+          </div>
+
+            
+          <div class="result-box">
+              <h3>Performance Plan</h3>
+                <p>Perfect for fitness newcomers, this plan<br>
+                  eases you into the fitness world with<br>
+                  personalised workouts, simple nutrition<br>
+                  guidance, and a supportive community.<br>
+                  Choose this for a gentle introduction to<br>
+                  your fitness journey.
+                 </p>
+
+              <h2>R450<span class="amount">per month</span></h2>
+              <button class="GS-Button">Get Started</button>
+          </div>
+
+          <div class="result-box">
+                <h3>Elite Plan</h3>
+                <p>Perfect for fitness newcomers, this plan<br>
+                    eases you into the fitness world with<br>
+                    personalised workouts, simple nutrition<br>
+                    guidance, and a supportive community.<br>
+                    Choose this for a gentle introduction to<br>
+                    your fitness journey.
+                </p>
+                  <h2>R840<span class="amount">per month</span></h2>
+                  <button class="GS-Button">Get Started</button>
+          </div>
+
+          
+          
+          <div class="training-sessions">
+              <p>
+                  + 2 trainings sessionss per week<br>
+                  + Basic nutrition guidance<br>
+                  + Access to all group classes<br>
+              </p>
+          </div>
+
+          
+
+          <div class="training-sessions">
+              <p>
+                  + 3 trainings sessionss per week<br>
+                  + Tailored nutrition advice<br>
+                  + Access to all group classes<br>
+                  + Monthly body composition scans<br>
+              </p>
+          </div>
+
+          
+          <div class="training-sessions">
+              <p>
+                  + 2 trainings sessionss per week<br>
+                  + Personalised nutrition plan<br>
+                  +Priority booking for all group classes<br>
+                  + Bi-weekly body composition scans<br>
+                  + Ongoing perfomances assessment<br>
+              </p>
+          </div>
+     </div>
+
+      <div class="supporting-text">
+          <p class="support-paragraph">Not convinced? We offer a R100% money-back guarantee for   all purchases. Try our product<br>
+                confidently, if you don't like it, we'll make it right.
+          </p>
+      </div>
+ </section>
+
+
+ <!--footer-->
+     
+<section>
+        <div class="leftright-CTA">
+             <div class="CTA-left">
+                  <h3> KINETIC LOFT</h3>
+                  <p>Personal fitness training service</p>
+                  <p>
+                      unlock your potential and redefine your limits with us.Our trainers tailor workout to your<br>
+                      ability, ensuring you're fit today and undeniably stronger tomorrow. it's our commitment<br>
+                      to your health. We deliver effective, efficient workouts paired with nutritional guidance to<br>
+                      help you reach your fitness peak.
+                  </p>
+                  <div class="subsrcibe-div">
+                  <input class="search-button" type="text" placeholder="Email Address">
+                  <button class="subscribe-button">Subscribe</button>
+                  </div>
+                </div>
+
+                <div class="CTA-right">
+                  <h3>
+                    Get Updated
+                  </h3>
+                    <p>
+                      Stay ahead in your fitness journey with our<br>
+                      exclusive tips and offers.
+                    </p>
+                    <div class="grouped-socials">
+                      <div class="social-div"><img src="Web-Images/facebook.png" class="social-icons"></div>
+                      <div class="social-div"><img src="Web-Images/tik-tok.png" class="social-icons"></div>
+                      <div class="social-div"><img src="Web-Images/instagram.png" class="social-icons"></div>
+                      <div class="social-div"><img src="Web-Images/twitter.png" class="social-icons"></div>
+                    </div>
+                </div>
+          </div>    
+     </div>
+</section>
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
